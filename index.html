@@ -4751,6 +4751,90 @@ html&gt;body{padding:0}&lt;/style&gt;
     #wb-prime-page #wb-preipo-flow .preipo-action { margin-right: -13px; margin-left: -13px; }
     #wb-prime-page #wb-preipo-flow .preipo-fact dd { max-width: 170px; }
   }
+  /* Integrated membership and benefits page, based on the approved local preview. */
+  #wb-prime-page #pi-membership-view {
+    --wm-bg: #fff; --wm-text: #14233a; --wm-navy: #101f37;
+    --wm-muted: #66758d; --wm-line: #e4eaf2; --wm-soft: #f6f9fd;
+    --wm-blue: #2a74ee; --wm-blue-soft: #edf4ff;
+    color: var(--wm-text); background: var(--wm-bg);
+  }
+#wb-prime-page #pi-membership-view .wm-content { padding: 20px 19px 30px; }
+#wb-prime-page #pi-membership-view .wm-prototype-switch &gt; span { display: block; color: var(--wm-muted); font-size: 11px; margin: 0 1px 8px; }
+#wb-prime-page #pi-membership-view .wm-tier-switch { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; margin-bottom: 14px; }
+#wb-prime-page #pi-membership-view .wm-tier-switch button { min-height: 39px; border: 1px solid var(--wm-line); border-radius: 10px; color: var(--wm-muted); background: var(--wm-soft); font-size: 12px; }
+#wb-prime-page #pi-membership-view .wm-tier-switch button[aria-pressed=&quot;true&quot;] { color: var(--wm-navy); background: var(--wm-bg); border-color: #94a9c7; box-shadow: 0 4px 12px rgba(20,44,78,.08); }
+#wb-prime-page #pi-membership-view .wm-member-card { position: relative; min-height: 170px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 18px; border-radius: 17px; border: 1px solid #c5a45f; color: #171613; background: radial-gradient(ellipse 76% 80% at 48% 8%,rgba(255,249,221,.88),transparent 70%),linear-gradient(104deg,#bd9652 0%,#ead7a5 17%,#faf0d3 46%,#dbc28c 75%,#a97d3d 110%); box-shadow: 0 11px 24px rgba(82,58,25,.16); }
+#wb-prime-page #pi-membership-view .wm-member-card::before { position: absolute; inset: 0; background: repeating-linear-gradient(0deg,rgba(255,255,255,.15) 0 1px,rgba(20,35,55,.025) 1px 2px,transparent 2px 4px); content: &quot;&quot;; mix-blend-mode: soft-light; pointer-events: none; }
+#wb-prime-page #pi-membership-view .wm-member-card &gt; * { position: relative; z-index: 1; }
+#wb-prime-page #pi-membership-view .wm-member-card.wm-reserve { border-color: #aeb8c4; color: #1d2024; background: radial-gradient(ellipse 76% 80% at 48% 6%,rgba(255,255,255,.94),transparent 70%),linear-gradient(104deg,#aab4c0 0%,#e0e5ec 17%,#f8fafc 46%,#d6dde6 75%,#9ca9b8 110%); box-shadow: 0 11px 24px rgba(29,46,70,.15); }
+#wb-prime-page #pi-membership-view .wm-member-card.wm-legacy { border-color: #4a8ad1; color: #eef5ff; background: radial-gradient(ellipse 74% 74% at 47% 7%,rgba(100,148,207,.3),transparent 72%),linear-gradient(104deg,#081524 0%,#1d3551 17%,#13263e 47%,#081523 79%,#1f4e7b 116%); box-shadow: 0 12px 25px rgba(7,24,47,.24); }
+#wb-prime-page #pi-membership-view .wm-card-center { position: relative; z-index: 1; width: 100%; text-align: center; }
+#wb-prime-page #pi-membership-view .wm-card-center small { display: block; font-size: 11px; opacity: .75; }
+#wb-prime-page #pi-membership-view .wm-card-center h3 { margin: 7px 0 0; font-size: 22px; font-weight: 500; font-style: italic; letter-spacing: .02em; }
+#wb-prime-page #pi-membership-view .wm-card-status { position: absolute; z-index: 1; top: 18px; right: 18px; padding: 4px 9px; border: 1px solid currentColor; border-radius: 999px; font-size: 11px; white-space: nowrap; background: rgba(255,255,255,.13); }
+#wb-prime-page #pi-membership-view .wm-pi-status { display: flex; align-items: center; justify-content: space-between; padding: 14px 1px; border-bottom: 1px solid var(--wm-line); color: var(--wm-muted); font-size: 12px; }
+#wb-prime-page #pi-membership-view .wm-pi-status span { display: inline-flex; align-items: center; gap: 6px; }
+#wb-prime-page #pi-membership-view .wm-pi-status svg { width: 14px; height: 14px; color: var(--wm-blue); }
+#wb-prime-page #pi-membership-view .wm-pi-status strong { color: var(--wm-navy); font-weight: 500; }
+#wb-prime-page #pi-membership-view .wm-section { margin-top: 25px; }
+#wb-prime-page #pi-membership-view .wm-heading { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+#wb-prime-page #pi-membership-view .wm-heading h3 { margin: 0; font-size: 16px; font-weight: 500; color: var(--wm-navy); }
+#wb-prime-page #pi-membership-view .wm-heading &gt; span { color: var(--wm-muted); font-size: 11px; }
+#wb-prime-page #pi-membership-view .wm-benefit-group { border-bottom: 1px solid var(--wm-line); }
+#wb-prime-page #pi-membership-view .wm-benefit-group:first-child { border-top: 1px solid var(--wm-line); }
+#wb-prime-page #pi-membership-view .wm-benefit-group summary { display: grid; grid-template-columns: 36px minmax(0,1fr) 20px; gap: 11px; align-items: center; list-style: none; min-height: 70px; padding: 9px 0; }
+#wb-prime-page #pi-membership-view .wm-benefit-group summary::-webkit-details-marker { display: none; }
+#wb-prime-page #pi-membership-view .wm-group-icon { width: 34px; height: 34px; display: grid; place-items: center; color: var(--wm-blue); background: var(--wm-blue-soft); border-radius: 50%; }
+#wb-prime-page #pi-membership-view .wm-group-icon svg { width: 16px; height: 16px; }
+#wb-prime-page #pi-membership-view .wm-group-title strong { display: block; color: var(--wm-navy); font-weight: 500; }
+#wb-prime-page #pi-membership-view .wm-group-title small { display: block; margin-top: 3px; color: var(--wm-muted); font-size: 11px; }
+#wb-prime-page #pi-membership-view .wm-benefit-group summary &gt; svg { width: 16px; height: 16px; color: var(--wm-muted); transition: transform .2s; }
+#wb-prime-page #pi-membership-view .wm-benefit-group[open] summary &gt; svg { transform: rotate(180deg); }
+#wb-prime-page #pi-membership-view .wm-group-body { padding: 0 0 14px 47px; }
+#wb-prime-page #pi-membership-view .wm-rate-row, #wb-prime-page #pi-membership-view .wm-text-row { display: flex; align-items: start; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid var(--wm-line); font-size: 12px; }
+#wb-prime-page #pi-membership-view .wm-rate-row strong, #wb-prime-page #pi-membership-view .wm-text-row strong { color: var(--wm-text); font-weight: 400; }
+#wb-prime-page #pi-membership-view .wm-rate-row span, #wb-prime-page #pi-membership-view .wm-text-row span { color: var(--wm-navy); font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+#wb-prime-page #pi-membership-view .wm-rate-row span { max-width: 50%; }
+#wb-prime-page #pi-membership-view .wm-text-row span { max-width: 75%; }
+#wb-prime-page #pi-membership-view .wm-group-body p { margin: 3px 0 0; color: var(--wm-muted); font-size: 12px; }
+#wb-prime-page #pi-membership-view .wm-group-note { margin-top: 8px !important; font-size: 11px !important; }
+#wb-prime-page #pi-membership-view .wm-next { margin-top: 26px; overflow: hidden; border: 1px solid #dbe3ed; border-radius: 18px; background: #fff; box-shadow: 0 13px 31px rgba(18,43,75,.08); }
+#wb-prime-page #pi-membership-view .wm-next-cover { position: relative; overflow: hidden; min-height: 154px; padding: 20px; background: radial-gradient(ellipse 75% 95% at 94% 0%,rgba(255,255,255,.9),transparent 65%),linear-gradient(123deg,#f8fafc 0%,#e9eef5 56%,#cfd9e6 100%); }
+#wb-prime-page #pi-membership-view .wm-next-cover::before { position: absolute; top: -45%; right: -15%; width: 75%; height: 180%; transform: rotate(24deg); background: linear-gradient(90deg,transparent 5%,rgba(255,255,255,.55) 33%,rgba(123,148,180,.08) 48%,rgba(255,255,255,.24) 64%,transparent 80%); content: &quot;&quot;; pointer-events: none; }
+#wb-prime-page #pi-membership-view .wm-next-cover::after { position: absolute; right: -15%; bottom: 21%; width: 65%; height: 1px; transform: rotate(-27deg); background: rgba(255,255,255,.7); box-shadow: 0 19px 0 rgba(255,255,255,.38),0 38px 0 rgba(255,255,255,.25); content: &quot;&quot;; pointer-events: none; }
+#wb-prime-page #pi-membership-view .wm-next-cover &gt; * { position: relative; z-index: 1; }
+#wb-prime-page #pi-membership-view .wm-next-kicker { color: #627892; font-size: 11px; letter-spacing: .08em; }
+#wb-prime-page #pi-membership-view .wm-next-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-top: 20px; }
+#wb-prime-page #pi-membership-view .wm-next h3 { margin: 0; color: #1d344f; font-family: Georgia, &quot;Times New Roman&quot;, serif; font-size: 32px; font-weight: 400; font-style: italic; letter-spacing: -.02em; }
+#wb-prime-page #pi-membership-view .wm-next-head span { color: #5f7590; font-size: 11px; white-space: nowrap; }
+#wb-prime-page #pi-membership-view .wm-next p { margin: 5px 0 0; color: #203854; font-size: 15px; font-weight: 500; }
+#wb-prime-page #pi-membership-view .wm-next-legacy .wm-next-cover { background: radial-gradient(ellipse 75% 95% at 95% 0%,rgba(119,167,218,.36),transparent 68%),linear-gradient(123deg,#162e4b 0%,#0d2644 50%,#31577c 100%); }
+#wb-prime-page #pi-membership-view .wm-next-legacy .wm-next-cover::before { background: linear-gradient(90deg,transparent 5%,rgba(165,208,255,.14) 33%,rgba(255,255,255,.04) 48%,rgba(129,179,229,.18) 64%,transparent 80%); }
+#wb-prime-page #pi-membership-view .wm-next-legacy .wm-next-kicker, #wb-prime-page #pi-membership-view .wm-next-legacy .wm-next-head span { color: #b9cbe0; }
+#wb-prime-page #pi-membership-view .wm-next-legacy h3, #wb-prime-page #pi-membership-view .wm-next-legacy p { color: #f6f8fd; }
+#wb-prime-page #pi-membership-view .wm-next-legacy .wm-next-cover { min-height: 185px; }
+#wb-prime-page #pi-membership-view .wm-next-legacy .wm-next-intro { max-width: 295px; margin-top: 10px; color: #cbd9e9; font-size: 12px; line-height: 1.55; font-weight: 400; }
+#wb-prime-page #pi-membership-view .wm-next-continuity { margin: 0 0 8px; color: #788ba2; font-size: 11px; }
+#wb-prime-page #pi-membership-view .wm-next-content { padding: 17px 20px 7px; background: #fff; }
+#wb-prime-page #pi-membership-view .wm-next-list-title { margin-bottom: 3px; color: #6b7a8e; font-size: 11px; letter-spacing: .08em; }
+#wb-prime-page #pi-membership-view .wm-next-gains { margin: 0; padding: 0; list-style: none; }
+#wb-prime-page #pi-membership-view .wm-next-gains li { display: flex; align-items: start; gap: 10px; padding: 11px 0; border-bottom: 1px solid #e8edf4; color: #1d2d45; font-size: 12px; }
+#wb-prime-page #pi-membership-view .wm-next-gains li:last-child { border-bottom: 0; }
+#wb-prime-page #pi-membership-view .wm-next-gains svg { flex: 0 0 15px; width: 15px; height: 15px; margin-top: 2px; color: #3b79cc; }
+#wb-prime-page #pi-membership-view .wm-compare, #wb-prime-page #pi-membership-view .wm-rules { border-bottom: 1px solid var(--wm-line); }
+#wb-prime-page #pi-membership-view .wm-compare { margin-top: 20px; border-top: 1px solid var(--wm-line); }
+#wb-prime-page #pi-membership-view .wm-compare summary, #wb-prime-page #pi-membership-view .wm-rules summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 51px; color: var(--wm-navy); font-size: 12px; font-weight: 500; list-style: none; }
+#wb-prime-page #pi-membership-view .wm-compare summary::-webkit-details-marker, #wb-prime-page #pi-membership-view .wm-rules summary::-webkit-details-marker { display: none; }
+#wb-prime-page #pi-membership-view .wm-compare summary svg, #wb-prime-page #pi-membership-view .wm-rules summary svg { width: 16px; height: 16px; color: var(--wm-muted); transition: transform .2s; }
+#wb-prime-page #pi-membership-view .wm-compare[open] summary svg, #wb-prime-page #pi-membership-view .wm-rules[open] summary svg { transform: rotate(90deg); }
+#wb-prime-page #pi-membership-view .wm-comparison { padding-bottom: 16px; }
+#wb-prime-page #pi-membership-view .wm-comparison p { margin: 0 0 10px; color: var(--wm-muted); font-size: 11px; }
+#wb-prime-page #pi-membership-view .wm-comparison table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 11px; }
+#wb-prime-page #pi-membership-view .wm-comparison th, #wb-prime-page #pi-membership-view .wm-comparison td { padding: 8px 3px; border-bottom: 1px solid var(--wm-line); text-align: left; font-weight: 400; word-wrap: break-word; }
+#wb-prime-page #pi-membership-view .wm-comparison thead th { color: var(--wm-muted); font-weight: 500; }
+#wb-prime-page #pi-membership-view .wm-comparison th:first-child { width: 33%; }
+#wb-prime-page #pi-membership-view .wm-rules p { margin: 0; padding: 0 0 15px; color: var(--wm-muted); font-size: 12px; }
+#wb-prime-page #pi-membership-view .wm-demo-note { margin: 16px 0 0; color: var(--wm-muted); font-size: 11px; }
 &lt;/style&gt;
 
 &lt;div id=&quot;wb-prime-page&quot;&gt;
@@ -4909,39 +4993,86 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;h2 id=&quot;pi-membership-view-title&quot;&gt;會籍與權益&lt;/h2&gt;
         &lt;span&gt;&lt;/span&gt;
       &lt;/header&gt;
-      &lt;div class=&quot;pi-subcontent&quot;&gt;
-        &lt;div class=&quot;pi-member-preview&quot;&gt;
-          &lt;span class=&quot;pi-member-preview-label&quot;&gt;原型預覽 · 切換會籍&lt;/span&gt;
-          &lt;div class=&quot;pi-member-preview-switch&quot; role=&quot;group&quot; aria-label=&quot;預覽會員等級&quot;&gt;
-            &lt;button type=&quot;button&quot; data-tier-preview=&quot;0&quot; aria-pressed=&quot;true&quot;&gt;Prime&lt;/button&gt;
-            &lt;button type=&quot;button&quot; data-tier-preview=&quot;1&quot; aria-pressed=&quot;false&quot;&gt;Reserve&lt;/button&gt;
-            &lt;button type=&quot;button&quot; data-tier-preview=&quot;2&quot; aria-pressed=&quot;false&quot;&gt;Legacy&lt;/button&gt;
-          &lt;/div&gt;
+      &lt;div class=&quot;pi-subcontent wm-content&quot;&gt;
+      &lt;div class=&quot;wm-prototype-switch&quot; aria-label=&quot;原型預覽切換會籍&quot;&gt;
+        &lt;span&gt;原型預覽 · 切換會籍&lt;/span&gt;
+        &lt;div class=&quot;wm-tier-switch&quot; role=&quot;group&quot; aria-label=&quot;預覽 Prime、Reserve 或 Legacy&quot;&gt;
+          &lt;button type=&quot;button&quot; data-tier-preview=&quot;0&quot; aria-pressed=&quot;true&quot;&gt;Prime&lt;/button&gt;
+          &lt;button type=&quot;button&quot; data-tier-preview=&quot;1&quot; aria-pressed=&quot;false&quot;&gt;Reserve&lt;/button&gt;
+          &lt;button type=&quot;button&quot; data-tier-preview=&quot;2&quot; aria-pressed=&quot;false&quot;&gt;Legacy&lt;/button&gt;
         &lt;/div&gt;
-        &lt;section class=&quot;pi-member-hero pi-tier-gold&quot; id=&quot;pi-member-hero&quot; aria-labelledby=&quot;pi-member-tier-name&quot;&gt;
-          &lt;div class=&quot;pi-member-hero-head&quot;&gt;
-            &lt;div&gt;&lt;small&gt;您的當前會籍&lt;/small&gt;&lt;h3 id=&quot;pi-member-tier-name&quot;&gt;Webull Prime&lt;/h3&gt;&lt;span class=&quot;pi-member-subtitle&quot;&gt;Professional Investor&lt;/span&gt;&lt;/div&gt;
-            &lt;span class=&quot;pi-member-active&quot;&gt;會籍有效&lt;/span&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;pi-member-assets&quot;&gt;
-            &lt;span class=&quot;pi-member-assets-label&quot;&gt;會籍資產總值&lt;button type=&quot;button&quot; class=&quot;pi-member-balance-hold&quot; data-member-balance-hold aria-label=&quot;按住查看會籍資產&quot; aria-pressed=&quot;false&quot;&gt;&lt;svg class=&quot;pi-member-eye-closed&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M3 9.5c2.5 3.1 5.5 4.7 9 4.7s6.5-1.6 9-4.7M6.2 13.1l-1.3 1.8M12 14.2v2.1M17.8 13.1l1.3 1.8&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;svg class=&quot;pi-member-eye-open&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M2.5 12s3.5-5.8 9.5-5.8 9.5 5.8 9.5 5.8-3.5 5.8-9.5 5.8S2.5 12 2.5 12Z&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;2.5&quot; fill=&quot;currentColor&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/span&gt;
-            &lt;strong id=&quot;pi-member-assets-value&quot; data-member-sensitive data-value=&quot;HK$5,000,000&quot;&gt;******&lt;/strong&gt;
-          &lt;/div&gt;
-        &lt;/section&gt;
+      &lt;/div&gt;
 
-        &lt;section class=&quot;pi-member-section&quot; aria-labelledby=&quot;pi-services-title&quot;&gt;
-          &lt;h3 id=&quot;pi-services-title&quot;&gt;專屬服務與福利&lt;/h3&gt;
-          &lt;div class=&quot;pi-services pi-member-services&quot; aria-label=&quot;專屬服務與福利&quot;&gt;
-            &lt;button class=&quot;pi-service&quot; data-open=&quot;pi-benefits-view&quot;&gt;&lt;span class=&quot;pi-circle-icon&quot;&gt;&lt;i data-lucide=&quot;gift&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;b&gt;專屬權益&lt;/b&gt;&lt;/button&gt;
-            &lt;div class=&quot;pi-service&quot;&gt;&lt;span class=&quot;pi-circle-icon&quot;&gt;&lt;i data-lucide=&quot;chart-no-axes-combined&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;b&gt;Algo算法交易&lt;/b&gt;&lt;/div&gt;
-            &lt;button class=&quot;pi-service&quot; data-open=&quot;pi-events-view&quot;&gt;&lt;span class=&quot;pi-circle-icon&quot;&gt;&lt;i data-lucide=&quot;calendar-days&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;b&gt;專屬活動&lt;/b&gt;&lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/section&gt;
+      &lt;section class=&quot;wm-member-card wm-prime&quot; aria-labelledby=&quot;wm-tier-name&quot;&gt;
+        &lt;div class=&quot;wm-card-center&quot;&gt;&lt;small&gt;您的當前會籍&lt;/small&gt;&lt;h3 id=&quot;wm-tier-name&quot;&gt;Webull Prime&lt;/h3&gt;&lt;/div&gt;&lt;span class=&quot;wm-card-status&quot;&gt;會籍有效&lt;/span&gt;
+      &lt;/section&gt;
 
-        &lt;section class=&quot;pi-member-section&quot; aria-labelledby=&quot;pi-membership-rules-title&quot;&gt;
-          &lt;h3 id=&quot;pi-membership-rules-title&quot;&gt;會籍與服務說明&lt;/h3&gt;
-          &lt;details class=&quot;pi-rule-details&quot;&gt;&lt;summary&gt;查看資格與服務原則&lt;/summary&gt;&lt;p&gt;投資資訊按適用性向相關客戶公平發布；一對一服務提供個人化解讀，不代表優先取得買賣建議、優先成交或保證獲得產品配額。Webull Wealth 會籍與法定專業投資者資格分別認定，實際資格及權益以正式條款與合規審批結果為準。&lt;/p&gt;&lt;/details&gt;
-        &lt;/section&gt;
+      &lt;div class=&quot;wm-pi-status&quot;&gt;&lt;span&gt;&lt;i data-lucide=&quot;badge-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;專業投資者資格&lt;/span&gt;&lt;strong&gt;已認證&lt;/strong&gt;&lt;/div&gt;
+
+      &lt;section class=&quot;wm-section&quot; aria-labelledby=&quot;wm-benefits-title&quot;&gt;
+        &lt;div class=&quot;wm-heading&quot;&gt;&lt;h3 id=&quot;wm-benefits-title&quot;&gt;我的會籍權益&lt;/h3&gt;&lt;span&gt;按類別查看&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;wm-benefit-groups&quot;&gt;
+          &lt;details class=&quot;wm-benefit-group&quot;&gt;
+            &lt;summary&gt;&lt;span class=&quot;wm-group-icon&quot;&gt;&lt;i data-lucide=&quot;badge-percent&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;wm-group-title&quot;&gt;&lt;strong&gt;交易與投資優惠&lt;/strong&gt;&lt;small&gt;融資、期權、私募基金及換匯&lt;/small&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+            &lt;div class=&quot;wm-group-body&quot; id=&quot;wm-rates&quot;&gt;&lt;/div&gt;
+          &lt;/details&gt;
+          &lt;details class=&quot;wm-benefit-group&quot;&gt;
+            &lt;summary&gt;&lt;span class=&quot;wm-group-icon&quot;&gt;&lt;i data-lucide=&quot;chart-no-axes-combined&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;wm-group-title&quot;&gt;&lt;strong&gt;行情與研究&lt;/strong&gt;&lt;small&gt;港股 L2、OPRA 及市場研報&lt;/small&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+            &lt;div class=&quot;wm-group-body&quot;&gt;
+              &lt;div class=&quot;wm-text-row&quot;&gt;&lt;strong&gt;香港股票行情&lt;/strong&gt;&lt;span&gt;HKEX L2 Global&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;wm-text-row&quot;&gt;&lt;strong&gt;美國期權 OPRA&lt;/strong&gt;&lt;span&gt;全年常開&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;wm-text-row&quot;&gt;&lt;strong&gt;研究內容&lt;/strong&gt;&lt;span&gt;Webull US Fund Flow 及其他研報&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/details&gt;
+          &lt;details class=&quot;wm-benefit-group&quot;&gt;
+            &lt;summary&gt;&lt;span class=&quot;wm-group-icon&quot;&gt;&lt;i data-lucide=&quot;headset&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;wm-group-title&quot;&gt;&lt;strong&gt;專屬服務&lt;/strong&gt;&lt;small&gt;客戶經理與投資顧問&lt;/small&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+            &lt;div class=&quot;wm-group-body&quot;&gt;
+              &lt;div class=&quot;wm-text-row&quot;&gt;&lt;strong&gt;專屬客戶經理&lt;/strong&gt;&lt;span&gt;7×24 優先服務&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;wm-text-row&quot;&gt;&lt;strong&gt;投資顧問&lt;/strong&gt;&lt;span&gt;一對一服務&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;wm-text-row&quot;&gt;&lt;strong&gt;投資者教育&lt;/strong&gt;&lt;span&gt;專題講座與 Alpha Investment Club&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/details&gt;
+          &lt;details class=&quot;wm-benefit-group&quot;&gt;
+            &lt;summary&gt;&lt;span class=&quot;wm-group-icon&quot;&gt;&lt;i data-lucide=&quot;calendar-days&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;wm-group-title&quot;&gt;&lt;strong&gt;活動與禮遇&lt;/strong&gt;&lt;small id=&quot;wm-lifestyle-subtitle&quot;&gt;生日禮物與會員活動&lt;/small&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+            &lt;div class=&quot;wm-group-body&quot; id=&quot;wm-lifestyle&quot;&gt;&lt;/div&gt;
+          &lt;/details&gt;
+          &lt;details class=&quot;wm-benefit-group&quot;&gt;
+            &lt;summary&gt;&lt;span class=&quot;wm-group-icon&quot;&gt;&lt;i data-lucide=&quot;briefcase-business&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;wm-group-title&quot;&gt;&lt;strong&gt;專業投資者產品&lt;/strong&gt;&lt;small&gt;須另符合資格與產品適當性&lt;/small&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+            &lt;div class=&quot;wm-group-body&quot;&gt;&lt;p&gt;可了解對沖基金、私募股權、Pre-IPO 及結構性產品等投資機會。產品准入取決於專業投資者資格、適當性審核及各產品條款，並非會籍自動開通。&lt;/p&gt;&lt;/div&gt;
+          &lt;/details&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;wm-next wm-next-reserve&quot; id=&quot;wm-next&quot; aria-labelledby=&quot;wm-next-title&quot;&gt;
+        &lt;div class=&quot;wm-next-cover&quot;&gt;
+          &lt;div class=&quot;wm-next-kicker&quot;&gt;探索下一會籍&lt;/div&gt;
+          &lt;div class=&quot;wm-next-head&quot;&gt;&lt;h3 id=&quot;wm-next-title&quot;&gt;Reserve&lt;/h3&gt;&lt;span id=&quot;wm-next-threshold&quot;&gt;門檻 HK$2,500萬&lt;/span&gt;&lt;/div&gt;
+          &lt;p id=&quot;wm-next-summary&quot;&gt;更深行情與定制服務&lt;/p&gt;
+          &lt;p class=&quot;wm-next-intro&quot; id=&quot;wm-next-intro&quot; hidden&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;wm-next-content&quot;&gt;
+          &lt;div class=&quot;wm-next-continuity&quot; id=&quot;wm-next-continuity&quot; hidden&gt;在 Reserve 全部權益之上&lt;/div&gt;
+          &lt;div class=&quot;wm-next-list-title&quot;&gt;新增權益&lt;/div&gt;
+          &lt;ul class=&quot;wm-next-gains&quot; id=&quot;wm-next-gains&quot;&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;details class=&quot;wm-compare&quot;&gt;
+        &lt;summary&gt;比較 Prime、Reserve、Legacy 的不同之處 &lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+        &lt;div class=&quot;wm-comparison&quot;&gt;&lt;p&gt;以下只列各級差異；其他已展示的會員服務在三個會籍相同。&lt;/p&gt;
+          &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;權益&lt;/th&gt;&lt;th&gt;Prime&lt;/th&gt;&lt;th&gt;Reserve&lt;/th&gt;&lt;th&gt;Legacy&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+            &lt;tr&gt;&lt;th&gt;USD 融資年利率&lt;/th&gt;&lt;td&gt;4.50%&lt;/td&gt;&lt;td&gt;4.25%&lt;/td&gt;&lt;td&gt;4.00%&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;th&gt;HKD 融資年利率&lt;/th&gt;&lt;td&gt;5.50%&lt;/td&gt;&lt;td&gt;5.25%&lt;/td&gt;&lt;td&gt;5.00%&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;th&gt;私募基金申購費&lt;/th&gt;&lt;td&gt;0.80%&lt;/td&gt;&lt;td&gt;0.50%&lt;/td&gt;&lt;td&gt;0.50%&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;th&gt;換匯加點&lt;/th&gt;&lt;td&gt;10 bps&lt;/td&gt;&lt;td&gt;5 bps&lt;/td&gt;&lt;td&gt;5 bps&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;th&gt;結婚紀念日&lt;/th&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;定制晚餐&lt;/td&gt;&lt;td&gt;定制晚餐&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;th&gt;稀缺活動席位&lt;/th&gt;&lt;td&gt;邀請池&lt;/td&gt;&lt;td&gt;邀請池&lt;/td&gt;&lt;td&gt;優先納入&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;&lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;wm-rules&quot;&gt;&lt;summary&gt;查看會籍資格與服務規則 &lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;&lt;p&gt;Prime、Reserve、Legacy 的會籍資產門檻分別為 HK$800萬、HK$2,500萬及 HK$5,000萬。資產連續 7 日達標自動升級；連續 30 日低於現有門檻，會籍資格將失效。財富會籍與法定專業投資者資格分別認定，實際權益以適用條款為準。&lt;/p&gt;&lt;/details&gt;
+      &lt;p class=&quot;wm-demo-note&quot;&gt;會籍門檻僅供原型預覽；費率及服務內容按現有權益表展示。&lt;/p&gt;
       &lt;/div&gt;
     &lt;/section&gt;
 
@@ -6417,11 +6548,10 @@ html&gt;body{padding:0}&lt;/style&gt;
     const next = root.querySelector(&#x27;#pi-tier-next&#x27;);
     const tierName = root.querySelector(&#x27;#pi-tier-name&#x27;);
     const tierPreviewButtons = [...root.querySelectorAll(&#x27;[data-tier-preview]&#x27;)];
-    const memberHero = root.querySelector(&#x27;#pi-member-hero&#x27;);
-    const memberTierName = root.querySelector(&#x27;#pi-member-tier-name&#x27;);
+    const memberHero = root.querySelector(&#x27;.wm-member-card&#x27;);
+    const memberTierName = root.querySelector(&#x27;#wm-tier-name&#x27;);
     const memberAdvice = root.querySelector(&#x27;#pi-member-advice&#x27;);
     const memberEvents = root.querySelector(&#x27;#pi-member-events&#x27;);
-    const memberAssetsValue = root.querySelector(&#x27;#pi-member-assets-value&#x27;);
     const mainView = root.querySelector(&#x27;#pi-main-view&#x27;);
     const subpages = [...root.querySelectorAll(&#x27;.pi-subpage&#x27;)];
     const managerButton = root.querySelector(&#x27;#pi-manager-button&#x27;);
@@ -6434,8 +6564,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     const chatInput = root.querySelector(&#x27;#pi-chat-input&#x27;);
     const chatSend = root.querySelector(&#x27;#pi-chat-send&#x27;);
     const chatMessages = root.querySelector(&#x27;#pi-chat-messages&#x27;);
-    const memberSensitiveValues = [...root.querySelectorAll(&#x27;[data-member-sensitive]&#x27;)];
-    const memberBalanceHoldButtons = [...root.querySelectorAll(&#x27;[data-member-balance-hold]&#x27;)];
     const productDetailTitle = root.querySelector(&#x27;#pi-product-detail-view-title&#x27;);
     const productDetailMark = root.querySelector(&#x27;#pi-product-detail-mark&#x27;);
     const productDetailName = root.querySelector(&#x27;#pi-product-detail-name&#x27;);
@@ -6633,53 +6761,47 @@ html&gt;body{padding:0}&lt;/style&gt;
       autoToast.hidden = true;
       autoEntryStatus.textContent = Object.values(autoCashConfigs).some((item) =&gt; item.enabled) ? &#x27;已開通&#x27; : &#x27;未開通&#x27;;
     };
-    const setMemberAssetVisibility = (visible) =&gt; {
-      root.classList.toggle(&#x27;pi-member-assets-visible&#x27;, visible);
-      memberSensitiveValues.forEach((item) =&gt; {
-        item.textContent = visible ? item.dataset.value : &#x27;******&#x27;;
-      });
-      memberBalanceHoldButtons.forEach((button) =&gt; {
-        button.setAttribute(&#x27;aria-pressed&#x27;, visible ? &#x27;true&#x27; : &#x27;false&#x27;);
-        button.setAttribute(&#x27;aria-label&#x27;, visible ? &#x27;放開隱藏會籍資產&#x27; : &#x27;按住查看會籍資產&#x27;);
-      });
-    };
-    memberBalanceHoldButtons.forEach((button) =&gt; {
-      button.addEventListener(&#x27;pointerdown&#x27;, (event) =&gt; {
-        event.preventDefault();
-        button.setPointerCapture?.(event.pointerId);
-        setMemberAssetVisibility(true);
-      });
-      button.addEventListener(&#x27;pointerup&#x27;, () =&gt; setMemberAssetVisibility(false));
-      button.addEventListener(&#x27;pointercancel&#x27;, () =&gt; setMemberAssetVisibility(false));
-      button.addEventListener(&#x27;lostpointercapture&#x27;, () =&gt; setMemberAssetVisibility(false));
-      button.addEventListener(&#x27;contextmenu&#x27;, (event) =&gt; event.preventDefault());
-      button.addEventListener(&#x27;keydown&#x27;, (event) =&gt; {
-        if ((event.key === &#x27; &#x27; || event.key === &#x27;Enter&#x27;) &amp;&amp; !event.repeat) {
-          event.preventDefault();
-          setMemberAssetVisibility(true);
-        }
-      });
-      button.addEventListener(&#x27;keyup&#x27;, (event) =&gt; {
-        if (event.key === &#x27; &#x27; || event.key === &#x27;Enter&#x27;) setMemberAssetVisibility(false);
-      });
-    });
     const tiers = [
-      { name: &#x27;Webull Prime&#x27;, assets: &#x27;HK$5,000,000&#x27;, className: &#x27;pi-tier-gold&#x27;, advice: &#x27;可預約客戶經理進行一對一說明&#x27;, events: &#x27;參與專業投資者市場活動&#x27; },
-      { name: &#x27;Webull Reserve&#x27;, assets: &#x27;HK$23,100,000&#x27;, className: &#x27;pi-tier-silver&#x27;, advice: &#x27;由客戶經理提供進階一對一解讀&#x27;, events: &#x27;參與精選市場活動與專題交流&#x27; },
-      { name: &#x27;Webull Legacy&#x27;, assets: &#x27;HK$35,000,000&#x27;, className: &#x27;pi-tier-diamond&#x27;, advice: &#x27;由資深團隊提供深度個人化支援&#x27;, events: &#x27;參與邀請制閉門市場活動&#x27; }
+      { name: &#x27;Webull Prime&#x27;, className: &#x27;pi-tier-gold&#x27;, advice: &#x27;可預約客戶經理進行一對一說明&#x27;, events: &#x27;參與專業投資者市場活動&#x27; },
+      { name: &#x27;Webull Reserve&#x27;, className: &#x27;pi-tier-silver&#x27;, advice: &#x27;由客戶經理提供進階一對一解讀&#x27;, events: &#x27;參與精選市場活動與專題交流&#x27; },
+      { name: &#x27;Webull Legacy&#x27;, className: &#x27;pi-tier-diamond&#x27;, advice: &#x27;由資深團隊提供深度個人化支援&#x27;, events: &#x27;參與邀請制閉門市場活動&#x27; }
     ];
+    const membershipBenefitData = {
+    prime: { name: &#x27;Prime&#x27;, rates: [[&#x27;USD 融資年利率&#x27;,&#x27;4.50%&#x27;],[&#x27;HKD 融資年利率&#x27;,&#x27;5.50%&#x27;],[&#x27;美股期權平台費&#x27;,&#x27;US$0.15 / 張&#x27;],[&#x27;每單最低平台費&#x27;,&#x27;無&#x27;],[&#x27;私募基金申購費&#x27;,&#x27;0.80%&#x27;],[&#x27;換匯加點&#x27;,&#x27;10 bps&#x27;]], lifestyle: [[&#x27;生日禮物&#x27;,&#x27;定制精美生日禮物&#x27;],[&#x27;投資活動&#x27;,&#x27;Alpha Investment Club、&lt;br&gt;年度答謝晚宴&#x27;],[&#x27;稀缺活動席位&#x27;,&#x27;按邀請池分配&#x27;]], next: &#x27;reserve&#x27;, nextSummary: &#x27;更深行情與定制服務&#x27;, nextGains: [&#x27;更深入的市場解讀與個人化服務&#x27;,&#x27;USD 與 HKD 融資利率進一步優惠&#x27;,&#x27;私募基金申購費降至 0.50%&#x27;,&#x27;換匯加點降至 5 bps&#x27;,&#x27;結婚紀念日定制晚餐&#x27;] },
+    reserve: { name: &#x27;Reserve&#x27;, rates: [[&#x27;USD 融資年利率&#x27;,&#x27;4.25%&#x27;],[&#x27;HKD 融資年利率&#x27;,&#x27;5.25%&#x27;],[&#x27;美股期權平台費&#x27;,&#x27;US$0.15 / 張&#x27;],[&#x27;每單最低平台費&#x27;,&#x27;無&#x27;],[&#x27;私募基金申購費&#x27;,&#x27;0.50%&#x27;],[&#x27;換匯加點&#x27;,&#x27;5 bps&#x27;]], lifestyle: [[&#x27;生日禮物&#x27;,&#x27;定制精美生日禮物&#x27;],[&#x27;結婚紀念日&#x27;,&#x27;定制晚餐一份&#x27;],[&#x27;投資活動&#x27;,&#x27;Alpha Investment Club、&lt;br&gt;年度答謝晚宴&#x27;],[&#x27;稀缺活動席位&#x27;,&#x27;按邀請池分配&#x27;]], next: &#x27;legacy&#x27;, nextSummary: &#x27;家庭級管家與傳承支持&#x27;, nextIntro: &#x27;讓財富安排，從個人延伸至家人與未來。&#x27;, nextGains: [&#x27;按家庭財富需求提供定制化服務&#x27;,&#x27;美元融資年利率降至 4.00%&#x27;,&#x27;港元融資年利率降至 5.00%&#x27;,&#x27;稀缺活動優先納入邀請池&#x27;] },
+    legacy: { name: &#x27;Legacy&#x27;, rates: [[&#x27;USD 融資年利率&#x27;,&#x27;4.00%&#x27;],[&#x27;HKD 融資年利率&#x27;,&#x27;5.00%&#x27;],[&#x27;美股期權平台費&#x27;,&#x27;US$0.15 / 張&#x27;],[&#x27;每單最低平台費&#x27;,&#x27;無&#x27;],[&#x27;私募基金申購費&#x27;,&#x27;0.50%&#x27;],[&#x27;換匯加點&#x27;,&#x27;5 bps&#x27;]], lifestyle: [[&#x27;生日禮物&#x27;,&#x27;定制精美生日禮物&#x27;],[&#x27;結婚紀念日&#x27;,&#x27;定制晚餐一份&#x27;],[&#x27;投資活動&#x27;,&#x27;Alpha Investment Club、&lt;br&gt;年度答謝晚宴&#x27;],[&#x27;稀缺活動席位&#x27;,&#x27;優先納入邀請池&#x27;]], next: null }
+    };
+    const membershipThresholds = { reserve: 25000000, legacy: 50000000 };
+    const membershipRows = (items, className) =&gt; items.map(([label, value]) =&gt; `&lt;div class=&quot;${className}&quot;&gt;&lt;strong&gt;${label}&lt;/strong&gt;&lt;span&gt;${value}&lt;/span&gt;&lt;/div&gt;`).join(&#x27;&#x27;);
     let tierIndex = 0;
 
     const renderTier = () =&gt; {
       const tier = tiers[tierIndex];
+      const key = [&#x27;prime&#x27;, &#x27;reserve&#x27;, &#x27;legacy&#x27;][tierIndex];
+      const benefits = membershipBenefitData[key];
       card.classList.remove(&#x27;pi-tier-silver&#x27;, &#x27;pi-tier-gold&#x27;, &#x27;pi-tier-diamond&#x27;);
       card.classList.add(tier.className);
       tierName.textContent = tier.name;
-      memberHero.classList.remove(&#x27;pi-tier-silver&#x27;, &#x27;pi-tier-gold&#x27;, &#x27;pi-tier-diamond&#x27;);
-      memberHero.classList.add(tier.className);
+      memberHero.classList.remove(&#x27;wm-prime&#x27;, &#x27;wm-reserve&#x27;, &#x27;wm-legacy&#x27;);
+      memberHero.classList.add(&#x27;wm-&#x27; + key);
       memberTierName.textContent = tier.name;
-      memberAssetsValue.dataset.value = tier.assets;
-      setMemberAssetVisibility(false);
+      root.querySelector(&#x27;#wm-rates&#x27;).innerHTML = membershipRows(benefits.rates, &#x27;wm-rate-row&#x27;) + &#x27;&lt;p class=&quot;wm-group-note&quot;&gt;實際費率及適用範圍以交易頁與正式條款為準。&lt;/p&gt;&#x27;;
+      root.querySelector(&#x27;#wm-lifestyle&#x27;).innerHTML = membershipRows(benefits.lifestyle, &#x27;wm-text-row&#x27;);
+      root.querySelector(&#x27;#wm-lifestyle-subtitle&#x27;).textContent = key === &#x27;prime&#x27; ? &#x27;生日禮物與會員活動&#x27; : &#x27;生日禮物、紀念日與會員活動&#x27;;
+      const nextTier = root.querySelector(&#x27;#wm-next&#x27;);
+      nextTier.hidden = !benefits.next;
+      if (benefits.next) {
+        nextTier.classList.toggle(&#x27;wm-next-legacy&#x27;, benefits.next === &#x27;legacy&#x27;);
+        nextTier.classList.toggle(&#x27;wm-next-reserve&#x27;, benefits.next === &#x27;reserve&#x27;);
+        root.querySelector(&#x27;#wm-next-title&#x27;).textContent = membershipBenefitData[benefits.next].name;
+        root.querySelector(&#x27;#wm-next-threshold&#x27;).textContent = &#x27;門檻 HK$&#x27; + (membershipThresholds[benefits.next] / 10000).toLocaleString(&#x27;zh-HK&#x27;) + &#x27;萬&#x27;;
+        root.querySelector(&#x27;#wm-next-summary&#x27;).textContent = benefits.nextSummary;
+        const nextIntro = root.querySelector(&#x27;#wm-next-intro&#x27;);
+        nextIntro.hidden = !benefits.nextIntro;
+        nextIntro.textContent = benefits.nextIntro || &#x27;&#x27;;
+        root.querySelector(&#x27;#wm-next-continuity&#x27;).hidden = benefits.next !== &#x27;legacy&#x27;;
+        root.querySelector(&#x27;#wm-next-gains&#x27;).innerHTML = benefits.nextGains.map(text =&gt; `&lt;li&gt;&lt;i data-lucide=&quot;check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;${text}&lt;/span&gt;&lt;/li&gt;`).join(&#x27;&#x27;);
+      }
       memberAdvice.textContent = tier.advice;
       memberEvents.textContent = tier.events;
       tierPreviewButtons.forEach((button) =&gt; {
@@ -6687,6 +6809,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       });
       previous.disabled = tierIndex === 0;
       next.disabled = tierIndex === tiers.length - 1;
+      globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
     };
 
     previous.addEventListener(&#x27;click&#x27;, () =&gt; {
@@ -6749,12 +6872,10 @@ html&gt;body{padding:0}&lt;/style&gt;
     });
     window.addEventListener(&#x27;blur&#x27;, () =&gt; {
       setAssetVisibility(false);
-      setMemberAssetVisibility(false);
     });
     document.addEventListener(&#x27;visibilitychange&#x27;, () =&gt; {
       if (document.hidden) {
         setAssetVisibility(false);
-        setMemberAssetVisibility(false);
       }
     });
     setAssetVisibility(false);
@@ -6762,7 +6883,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     let viewHistory = [&#x27;pi-main-view&#x27;];
     const showView = (viewId) =&gt; {
       setAssetVisibility(false);
-      setMemberAssetVisibility(false);
       mainView.hidden = viewId !== &#x27;pi-main-view&#x27;;
       subpages.forEach((page) =&gt; { page.hidden = page.id !== viewId; });
       root.scrollIntoView({ block: &#x27;start&#x27; });
